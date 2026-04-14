@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-fixed": "#9ef6b6",
+              "secondary": "#835500",
+              "on-secondary": "#ffffff",
+              "background": "#f7faf2",
+              "primary-container": "#006837",
+              "inverse-on-surface": "#eff2ea",
+              "on-secondary-fixed-variant": "#633f00",
+              "tertiary-container": "#95402a",
+              "tertiary": "#762a15",
+              "error-container": "#ffdad6",
+              "secondary-fixed": "#ffddb4",
+              "inverse-primary": "#83d99c",
+              "on-error-container": "#93000a",
+              "secondary-fixed-dim": "#ffb955",
+              "surface-variant": "#e0e4dc",
+              "on-error": "#ffffff",
+              "error": "#ba1a1a",
+              "on-surface": "#191d18",
+              "on-secondary-container": "#6b4500",
+              "on-secondary-fixed": "#291800",
+              "inverse-surface": "#2d312c",
+              "surface-dim": "#d8dbd3",
+              "surface-container-highest": "#e0e4dc",
+              "on-background": "#191d18",
+              "surface-container-low": "#f2f5ed",
+              "surface-container": "#ecefe7",
+              "on-tertiary-container": "#ffc4b5",
+              "primary-fixed-dim": "#83d99c",
+              "surface-tint": "#0b6d3b",
+              "surface": "#f7faf2",
+              "tertiary-fixed-dim": "#ffb4a1",
+              "on-primary-fixed-variant": "#00522a",
+              "on-tertiary-fixed": "#3c0800",
+              "surface-bright": "#f7faf2",
+              "outline-variant": "#bec9be",
+              "on-surface-variant": "#3f4940",
+              "tertiary-fixed": "#ffdbd2",
+              "surface-container-lowest": "#ffffff",
+              "primary": "#004d27",
+              "outline": "#6f7a70",
+              "on-primary-fixed": "#00210e"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        body { font-family: 'Manrope', sans-serif; background-color: #f7faf2; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+        h1, h2, h3, .font-serif { font-family: 'Noto Serif', serif; }
+        .menu-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 2rem; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="text-on-surface">
+<!-- Top Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-[#f7faf2]/95 backdrop-blur-md shadow-sm border-b border-emerald-100/30">
+<div class="flex justify-between items-center px-8 py-3 max-w-screen-2xl mx-auto">
+<img alt="" class="h-16 w-auto object-contain transition-opacity duration-300" src="https://lh3.googleusercontent.com/aida/ADBb0uj0jbZ0MQnobFNYE9FvRqPSP70JFMSvb_rj-0Ac-Ke8v21q1A_6UZXJbwD477CI1FKiLBOpFzY8uLCAcnZb11JakK3p2USF548Mz9v2AoNm6WYWLVLTDGp7vsca64aUyUH3OYcycqeklZpX409FvmB4mx8_flQgDsHI1hclxxgc_6eeXniKp81TvOErrsuANFgPTjnX3ZlTqDgWRHBI38CJW52SBFFgmTNAHn-xzPyh8tXurMWhdJQy3awQqq6kYCrcy7rdKfPs"/>
+<div class="hidden md:flex space-x-10 items-center">
+<a class="text-emerald-800/80 hover:text-amber-600 transition-colors duration-300 text-sm font-semibold tracking-wide" href="#" style="">Home</a>
+<a class="text-emerald-950 border-b-2 border-secondary pb-1 text-sm font-bold tracking-wide" href="#" style="">Menu</a>
+<a class="text-emerald-800/80 hover:text-amber-600 transition-colors duration-300 text-sm font-semibold tracking-wide" href="#" style="">Events</a>
+<a class="text-emerald-800/80 hover:text-amber-600 transition-colors duration-300 text-sm font-semibold tracking-wide" href="#" style="">Contact</a>
+</div>
+<button class="bg-primary hover:bg-primary-container text-white px-7 py-2.5 rounded-lg transition-all active:scale-95 duration-150 text-sm font-bold shadow-md" style="">
+            Book a Table
+        </button>
+</div>
+</nav>
+<main class="pt-32 pb-20">
+<!-- Hero Section -->
+<header class="max-w-7xl mx-auto px-8 py-20 text-center">
+<span class="font-label text-xs uppercase tracking-[0.25em] text-secondary font-extrabold mb-5 block" style="">Our Culinary Archives</span>
+<h1 class="text-6xl md:text-8xl font-serif text-primary leading-tight mb-8" style="">The Garden Menu</h1>
+<p class="max-w-3xl mx-auto text-on-surface-variant font-body text-xl leading-relaxed font-medium" style="">
+            A curation of multi-cuisine excellence, inspired by the lush surroundings of our conservatory. 
+            Savor the legacy of taste, crafted with local ingredients and global techniques.
+        </p>
+</header>
+<!-- Chef's Specials -->
+<section class="bg-surface-container-low py-24 px-8 mb-24 overflow-hidden">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row items-center gap-16">
+<div class="w-full md:w-1/2 rounded-2xl overflow-hidden shadow-2xl group">
+<img alt="Chef's Special" class="w-full h-[550px] object-cover transition-transform duration-1000 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZbj9hu2ujNZ_Sl6ze4-kqf_gB8ksGM6RdtODuykAPpGUxFoF_Tft55BP0wWBYRhU5QXzkQUXVGlbGTvz94zNrlTZEzzMFE8_OuktWWXdB3rd74NT3R-kHVIAoASq1cNpltG4ZXwzRP-tfnQ6fJgmBBEzCpXs1eN8uuRrw-w9SSWHc_xqAkpZK9J80GlmtuXnvEiAy8AYLTtSJf74Mj1iXblWj2kfL6_DEjHj1kWo_dEjvdjdHDwWVS_2Sq7Mb2DswlQHuveiabQ" style=""/>
+</div>
+<div class="w-full md:w-1/2">
+<span class="font-label text-xs uppercase tracking-[0.25em] text-tertiary font-extrabold mb-5 block" style="">Legacy of Taste</span>
+<h2 class="text-5xl font-serif text-primary mb-8" style="">Chef's Specials</h2>
+<div class="bg-white/70 backdrop-blur-md p-10 rounded-2xl border-l-4 border-secondary shadow-xl">
+<p class="italic text-on-surface-variant mb-10 font-serif text-xl leading-relaxed" style="">
+                            "Rooted in the prestigious legacy of Hotel Zopadi, these signature recipes have been perfected over decades, bringing timeless flavors to our garden setting."
+                        </p>
+<div class="space-y-10">
+<div class="flex justify-between items-start group cursor-default">
+<div class="max-w-[80%]">
+<h3 class="text-2xl font-serif text-primary group-hover:text-secondary transition-colors" style="">The Zopadi Handi</h3>
+<p class="text-base text-on-surface-variant font-body mt-2 leading-snug" style="">Slow-cooked succulent lamb in a clay pot with 21 secret spices.</p>
+</div>
+<span class="font-extrabold text-secondary text-2xl" style="">₹745</span>
+</div>
+<div class="flex justify-between items-start group cursor-default">
+<div class="max-w-[80%]">
+<h3 class="text-2xl font-serif text-primary group-hover:text-secondary transition-colors" style="">Smoked Garden Paneer</h3>
+<p class="text-base text-on-surface-variant font-body mt-2 leading-snug" style="">Hickory-smoked cottage cheese infused with fresh conservatory herbs.</p>
+</div>
+<span class="font-extrabold text-secondary text-2xl" style="">₹525</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Menu Navigation (Tabs) -->
+<div class="sticky top-[72px] z-40 bg-surface/98 backdrop-blur-lg py-7 mb-16 border-b border-outline-variant/30">
+<div class="max-w-7xl mx-auto px-8 flex justify-center space-x-16 overflow-x-auto no-scrollbar">
+<a class="font-label text-sm uppercase tracking-[0.2em] text-on-surface-variant/80 hover:text-primary transition-colors pb-2 font-bold" href="#starters" style="">Starters</a>
+<a class="font-label text-sm uppercase tracking-[0.2em] text-on-surface-variant/80 hover:text-primary transition-colors pb-2 font-bold" href="#main-course" style="">Main Course</a>
+<a class="font-label text-sm uppercase tracking-[0.2em] text-primary border-b-2 border-secondary font-black pb-2" href="#desserts" style="">Desserts</a>
+</div>
+</div>
+<!-- Starters Section -->
+<section class="max-w-7xl mx-auto px-8 mb-40" id="starters">
+<div class="flex items-center gap-8 mb-20">
+<h2 class="text-5xl font-serif text-primary" style="">Starters</h2>
+<div class="h-[1.5px] flex-grow bg-outline-variant/40"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16">
+<!-- Item 1 -->
+<div class="flex flex-col group">
+<div class="aspect-square rounded-[2rem] overflow-hidden mb-8 shadow-lg">
+<img alt="Crispy Lotus Stem" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBd4syLIZdyocdRRG8HIDSd1K3R5ORZGDM6HkGbMMNP82dAjhztvN9L_s2mvvTiU3VMRgpJi5vtQhTZOkeYyM-jZ7RSkNyLGUogbbByah67mWOdqXTRSsquHq9wE5i8zhfLanVeXd6U0HCPtvi0CnLkt6mQAjDMXPGmwv7FEtHbXHV3Kw__ELmLSyI6bAnuMYpJbF3-e6Pgyj8dIasotPri2LO3dE-eMel8G1Ezm0mYwl8yLjuuku1K2b_jmLlPTMgnh6qAWW1E6Q" style=""/>
+</div>
+<div class="flex justify-between items-center mb-3">
+<h3 class="text-2xl font-serif text-primary group-hover:text-secondary transition-colors" style="">Crispy Lotus Stem</h3>
+<span class="text-secondary font-extrabold text-xl" style="">₹385</span>
+</div>
+<p class="text-base text-on-surface-variant leading-relaxed font-medium" style="">Honey-chilli glaze with toasted sesame and garden-fresh scallions.</p>
+</div>
+<!-- Item 2 -->
+<div class="flex flex-col group">
+<div class="aspect-square rounded-[2rem] overflow-hidden mb-8 shadow-lg">
+<img alt="Malai Broccoli" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEYX36zbQPJrQ5-faNtrZskuk82g8hBxmh-ICW9fglsSX1XrBAq83OwMX4hVV52YKyxCQwEfc4_GVNOmURiT8XyJIYbl5MJVZt6zIg5zHxPG6iqmUw5h1VyPtsgyCmNSRfewZb8DQp1juzStV-hhELh9T_fEvuXhSq9YFxYZnh6ftkOxMdsAtJQ0v8XsTPiaYWbZ9EKFpCGYf63y6Qmo2Y_Q601WtL7xnUjrQBNjHGvAvkOr1noEtBXLf14JEQuBRBKXy6r00dqQ" style=""/>
+</div>
+<div class="flex justify-between items-center mb-3">
+<h3 class="text-2xl font-serif text-primary group-hover:text-secondary transition-colors" style="">Malai Broccoli</h3>
+<span class="text-secondary font-extrabold text-xl" style="">₹425</span>
+</div>
+<p class="text-base text-on-surface-variant leading-relaxed font-medium" style="">Char-grilled broccoli florets marinated in cardamom-scented cream.</p>
+</div>
+<!-- Item 3 -->
+<div class="flex flex-col group">
+<div class="aspect-square rounded-[2rem] overflow-hidden mb-8 shadow-lg">
+<img alt="Prawns Salt &amp; Pepper" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6UXh5nxoQB_Uq53wbZ9-KmnqlFOGdkgMUAqXSjdYX33GlLjZvVOMqqEBO8EKCat3lJJk9JF0SEILNUKPF3JCw1roQzzgAge6rGaF756I76i9ONC1_YyftFg1B64jwmAN-HOsW4PIhR-sGnvDckD0ennhMT8KSMkIVZ-McbVw0G6E9GDVJ63wXpxzAemAbwEX4xvGdtKX2z7V0zFa7PzaEZQsq1GSlNBN4ARdWB0qZyJxYIYTN8ODEuEZhqdf4vBHVIbsaVhxfNQ" style=""/>
+</div>
+<div class="flex justify-between items-center mb-3">
+<h3 class="text-2xl font-serif text-primary group-hover:text-secondary transition-colors" style="">Prawns Salt &amp; Pepper</h3>
+<span class="text-secondary font-extrabold text-xl" style="">₹595</span>
+</div>
+<p class="text-base text-on-surface-variant leading-relaxed font-medium" style="">Wok-tossed prawns with crushed peppercorns and garlic butter.</p>
+</div>
+</div>
+</section>
+<!-- Main Course Section -->
+<section class="bg-surface-container-highest py-32 mb-40" id="main-course">
+<div class="max-w-7xl mx-auto px-8">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-20">
+<div class="lg:col-span-5">
+<span class="font-label text-xs uppercase tracking-[0.25em] text-secondary font-extrabold mb-5 block" style="">The Heart of the Meal</span>
+<h2 class="text-6xl font-serif text-primary mb-10" style="">Main Course</h2>
+<p class="text-on-surface-variant mb-16 font-body text-lg leading-relaxed font-medium" style="">Substantial plates designed to be shared, celebrating traditional Indian flavors and continental classics.</p>
+<div class="space-y-16">
+<div class="group border-b border-outline-variant/40 pb-8">
+<div class="flex justify-between items-center mb-4">
+<h3 class="text-3xl font-serif text-primary group-hover:text-secondary transition-colors" style="">Dal Table 9</h3>
+<span class="text-primary font-extrabold text-xl" style="">₹345</span>
+</div>
+<p class="text-on-surface-variant italic text-lg" style="">Our 24-hour slow-cooked black lentils finished with churned butter.</p>
+</div>
+<div class="group border-b border-outline-variant/40 pb-8">
+<div class="flex justify-between items-center mb-4">
+<h3 class="text-3xl font-serif text-primary group-hover:text-secondary transition-colors" style="">Peshawari Murgh</h3>
+<span class="text-primary font-extrabold text-xl" style="">₹625</span>
+</div>
+<p class="text-on-surface-variant italic text-lg" style="">Chicken braised in a rich cashew and poppy seed gravy.</p>
+</div>
+</div>
+</div>
+<div class="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-10 pt-12 lg:pt-0">
+<div class="space-y-10">
+<img alt="Dal Makhani" class="w-full h-[450px] object-cover rounded-3xl shadow-2xl hover:shadow-emerald-900/10 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1XvynjINhQrnb95UJGNoRCU3VVKUOGx5Vx_N4foeTr0ikWUaFUv4nXC-MxOczm1kRsb2sE_lh2tsL_kzLqGU-sZP85dFN0UQ3OhViNeF-nN-aBWOGNUIuXc5sQNcYlv4dZFV2TsDgRFXWNTIolgXBEEY__9pJS1GUe18bHPW-V9RQnOSyQ_B_otoi7GHL29IjWiAeEav6txENSLCpiIF-v4WDPI5GMt3Bnjd_yyTJniXLj8zkdTXYA1aGmUzWyVFRHnljIaRY6Q" style=""/>
+<div class="p-10 bg-surface rounded-3xl shadow-md hover:shadow-xl transition-all duration-500 border border-outline-variant/10">
+<h3 class="text-2xl font-serif text-primary mb-3" style="">Wild Mushroom Risotto</h3>
+<p class="text-base text-on-surface-variant mb-6 font-medium" style="">Arborio rice with porcini, shiitake, and truffle oil drizzle.</p>
+<span class="font-extrabold text-secondary text-lg" style="">₹550</span>
+</div>
+</div>
+<div class="space-y-10 mt-16">
+<div class="p-10 bg-surface rounded-3xl shadow-md hover:shadow-xl transition-all duration-500 border border-outline-variant/10">
+<h3 class="text-2xl font-serif text-primary mb-3" style="">Bhuna Gosht</h3>
+<p class="text-base text-on-surface-variant mb-6 font-medium" style="">Dry-roasted mutton with onions, tomatoes, and aromatic whole spices.</p>
+<span class="font-extrabold text-secondary text-lg" style="">₹725</span>
+</div>
+<img alt="Peshawari Murgh" class="w-full h-[450px] object-cover rounded-3xl shadow-2xl hover:shadow-emerald-900/10 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9ZZW0WhTCK-6iQ2kWofjOmm-zSBf4-93KtOH2Vy7POJ6WaKiJRB5i4AUc49xtvLkiNk4WE2SYNtgmiP3LmdxK0Y6ffUx7uR8KeLdzv48uk2Vz-YkzAtB5qEz8urxMP7aITFyQ1KgEmYqHMoQgTOJxTYKofTPtByvZ02IhaLmx8XegaeUgTBkl8vJyXihehQgXXzP4EJk-2WMLp95xZNPA5gAD-3E7yEH9vUJo3agDFsTMzm_v1HobT7ehlCPh1dO3mbmUcUdFMQ" style=""/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Desserts Section -->
+<section class="max-w-7xl mx-auto px-8 mb-24" id="desserts">
+<div class="text-center mb-20">
+<span class="font-label text-xs uppercase tracking-[0.25em] text-secondary font-extrabold mb-5 block" style="">Sweet Endings</span>
+<h2 class="text-5xl font-serif text-primary" style="">Desserts</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+<!-- Item 1: Saffron Gulab Jamun -->
+<div class="bg-surface-container-low rounded-[2.5rem] overflow-hidden group hover:shadow-2xl transition-all duration-700 flex flex-col border border-outline-variant/20">
+<div class="h-72 overflow-hidden">
+<img alt="Saffron Gulab Jamun" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOc_9lHwi7b8Tloj4hsjA-XolCNH9ekiXScq7QGw5hMhvAgnj56QGIClibyc1eCMGjjQjOn6Q_eNzyfccSI72vG3gPJMKOG0wCxiYI4mr6QqQ3T1wX-4oATHss0zX2uU3kojUS9xZBXbJ3doklHJHUC3TuDPZlxOTsTOH_6sabvNKGzQ2WQmQeTcv6rtGrte4F6Xe5ADPiHebBoW-uTfC2v_Yu9PeXB-svBrj_P2Tm9huB0JKVdo7up0x11K56pdODfeZvbM3Jig" style=""/>
+</div>
+<div class="p-10 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-4">
+<h3 class="text-3xl font-serif text-primary group-hover:text-secondary transition-colors" style="">Saffron Gulab Jamun</h3>
+<span class="text-secondary font-extrabold text-2xl" style="">₹245</span>
+</div>
+<p class="text-base text-on-surface-variant leading-relaxed mb-8 font-medium" style="">Stuffed with pistachios and served warm in saffron syrup.</p>
+<div class="mt-auto pt-6 border-t border-outline-variant/30">
+<span class="text-xs uppercase tracking-[0.2em] text-secondary font-black" style="">House Signature</span>
+</div>
+</div>
+</div>
+<!-- Item 2: Garden Berry Tiramisu -->
+<div class="bg-surface-container-low rounded-[2.5rem] overflow-hidden group hover:shadow-2xl transition-all duration-700 flex flex-col border border-outline-variant/20">
+<div class="h-72 overflow-hidden">
+<img alt="Garden Berry Tiramisu" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAi6LlCl6G79owAPRCkXILlpUIjn5Agz7rr0yYcRKh1hq6zNnpwKbqaqUDEFTVFZgzBk6gwSZ2qxLHxdKirw8B71Ebq73WsKPRrR5tR8knPDPFV9MN6Ebj3wftcEHwnlW8i4wzJPtfPmd3VXXxWEqy4WxYNPpXUeSCpg6FYRbL7X1qT236XSDAxhPV05DaUya9q-bItU1om1uIoQGygjVMLmJeCsktparIdMhOfNups91ffc_X1wBQKfI5OuZnyVWPQ0URg1zwqbw" style=""/>
+</div>
+<div class="p-10 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-4">
+<h3 class="text-3xl font-serif text-primary group-hover:text-secondary transition-colors" style="">Garden Berry Tiramisu</h3>
+<span class="text-secondary font-extrabold text-2xl" style="">₹385</span>
+</div>
+<p class="text-base text-on-surface-variant leading-relaxed mb-8 font-medium" style="">Mascarpone layered with coffee-soaked biscuits and fresh seasonal berries.</p>
+<div class="mt-auto pt-6 border-t border-outline-variant/30">
+<span class="text-xs uppercase tracking-[0.2em] text-secondary font-black" style="">Chef's Choice</span>
+</div>
+</div>
+</div>
+<!-- Item 3: Baked Cheesecake -->
+<div class="bg-surface-container-low rounded-[2.5rem] overflow-hidden group hover:shadow-2xl transition-all duration-700 flex flex-col border border-outline-variant/20">
+<div class="h-72 overflow-hidden">
+<img alt="Baked Cheesecake" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCj8IbqBecta_l1H5mxmcuPG_Dsn9haNBSOFFiFjL1TCFQpg98_92VPISNYqspxOf3sYMgG-dbSvFxu50txDsFHYysoY-z6PirFMcOLQ2RykPtC4zd4bKdGvVnmiZkFTwJFbhCMJ7EexsSgQJfmPqSDD8kF0WjgTepVU16a9qqB8cFcAh3OlQkKik6Z987kfJ1cBPaq2MtBLSUTfJrWBEphh3zH15cBE4B0ThoBYDjKJHPam5n2a_2RmTP7jkHHUYF03OtG4-o07g" style=""/>
+</div>
+<div class="p-10 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-4">
+<h3 class="text-3xl font-serif text-primary group-hover:text-secondary transition-colors" style="">Baked Cheesecake</h3>
+<span class="text-secondary font-extrabold text-2xl" style="">₹415</span>
+</div>
+<p class="text-base text-on-surface-variant leading-relaxed mb-8 font-medium" style="">New York style cheesecake with a vibrant red berry reduction drizzle.</p>
+<div class="mt-auto pt-6 border-t border-outline-variant/30">
+<span class="text-xs uppercase tracking-[0.2em] text-secondary font-black" style="">Classic Indulgence</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low w-full border-t border-outline-variant/30">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-16 px-12 py-20 max-w-7xl mx-auto">
+<div>
+<img alt="Table 9" class="h-16 w-auto mb-8 hover:grayscale-0 hover:opacity-100 transition-all duration-500" src="https://lh3.googleusercontent.com/aida/ADBb0uj0jbZ0MQnobFNYE9FvRqPSP70JFMSvb_rj-0Ac-Ke8v21q1A_6UZXJbwD477CI1FKiLBOpFzY8uLCAcnZb11JakK3p2USF548Mz9v2AoNm6WYWLVLTDGp7vsca64aUyUH3OYcycqeklZpX409FvmB4mx8_flQgDsHI1hclxxgc_6eeXniKp81TvOErrsuANFgPTjnX3ZlTqDgWRHBI38CJW52SBFFgmTNAHn-xzPyh8tXurMWhdJQy3awQqq6kYCrcy7rdKfPs" style=""/>
+<p class="text-on-surface-variant font-body text-sm leading-relaxed font-semibold" style="">
+                © Table 9 Garden Restaurant. 9 Balapur, Chhatrapati Sambhajinagar.
+            </p>
+</div>
+<div class="flex flex-col space-y-5">
+<span class="font-label text-xs uppercase tracking-[0.25em] text-secondary font-black mb-2 block" style="">Connect</span>
+<a class="text-on-surface-variant hover:text-secondary transition-all duration-300 text-sm font-bold flex items-center gap-3" href="#" style="">
+<span class="material-symbols-outlined text-lg" style="">link</span> Instagram: @table9_csn
+            </a>
+<a class="text-on-surface-variant hover:text-secondary transition-all duration-300 text-sm font-bold flex items-center gap-3" href="#" style="">
+<span class="material-symbols-outlined text-lg" style="">call</span> Call: 9011058777
+            </a>
+</div>
+<div class="flex flex-col space-y-5">
+<span class="font-label text-xs uppercase tracking-[0.25em] text-secondary font-black mb-2 block" style="">Timings</span>
+<span class="text-on-surface-variant text-sm font-bold flex items-center gap-3" style="">
+<span class="material-symbols-outlined text-lg" style="">schedule</span> Hours: 11AM - 11PM
+            </span>
+<span class="text-on-surface-variant text-sm font-bold flex items-center gap-3" style="">
+<span class="material-symbols-outlined text-lg" style="">event_available</span> Open All 7 Days
+            </span>
+</div>
+</div>
+</footer>
+<!-- FAB for Reservation -->
+<button class="fixed bottom-10 right-10 bg-primary text-white p-5 pr-8 rounded-full shadow-2xl flex items-center justify-center hover:scale-105 hover:bg-primary-container transition-all active:scale-95 group z-50 ring-4 ring-white/20" style="">
+<span class="material-symbols-outlined mr-3 text-2xl" style="">restaurant</span>
+<span class="font-label font-black text-sm tracking-wider uppercase" style="">Reserve Now</span>
+</button>
+</body></html>
